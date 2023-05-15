@@ -1,0 +1,96 @@
+package constants;
+
+import java.util.HashMap;
+
+public class AlphabetMap {
+    public static HashMap<Character, Integer> alphabetMap = new HashMap<>();
+
+    static {
+        alphabetMap.put('»', 0);
+        alphabetMap.put('А', 1);
+        alphabetMap.put('Б', 2);
+        alphabetMap.put('В', 3);
+        alphabetMap.put('Г', 4);
+        alphabetMap.put('Д', 5);
+        alphabetMap.put('Е', 6);
+        alphabetMap.put('Ё', 7);
+        alphabetMap.put('Ж', 8);
+        alphabetMap.put('З', 9);
+        alphabetMap.put('И', 10);
+        alphabetMap.put('Й', 11);
+        alphabetMap.put('К', 12);
+        alphabetMap.put('Л', 13);
+        alphabetMap.put('М', 14);
+        alphabetMap.put('Н', 15);
+        alphabetMap.put('О', 16);
+        alphabetMap.put('П', 17);
+        alphabetMap.put('Р', 18);
+        alphabetMap.put('С', 19);
+        alphabetMap.put('Т', 20);
+        alphabetMap.put('У', 21);
+        alphabetMap.put('Ф', 22);
+        alphabetMap.put('Х', 23);
+        alphabetMap.put('Ц', 24);
+        alphabetMap.put('Ч', 25);
+        alphabetMap.put('Ш', 26);
+        alphabetMap.put('Щ', 27);
+        alphabetMap.put('Ъ', 28);
+        alphabetMap.put('Ы', 29);
+        alphabetMap.put('Ь', 30);
+        alphabetMap.put('Э', 31);
+        alphabetMap.put('Ю', 32);
+        alphabetMap.put('Я', 33);
+        alphabetMap.put('а', 34);
+        alphabetMap.put('б', 35);
+        alphabetMap.put('в', 36);
+        alphabetMap.put('г', 37);
+        alphabetMap.put('д', 38);
+        alphabetMap.put('е', 39);
+        alphabetMap.put('ё', 40);
+        alphabetMap.put('ж', 41);
+        alphabetMap.put('з', 42);
+        alphabetMap.put('и', 43);
+        alphabetMap.put('й', 44);
+        alphabetMap.put('к', 45);
+        alphabetMap.put('л', 46);
+        alphabetMap.put('м', 47);
+        alphabetMap.put('н', 48);
+        alphabetMap.put('о', 49);
+        alphabetMap.put('п', 50);
+        alphabetMap.put('р', 51);
+        alphabetMap.put('с', 52);
+        alphabetMap.put('т', 53);
+        alphabetMap.put('у', 54);
+        alphabetMap.put('ф', 55);
+        alphabetMap.put('х', 56);
+        alphabetMap.put('ц', 57);
+        alphabetMap.put('ч', 58);
+        alphabetMap.put('ш', 59);
+        alphabetMap.put('щ', 60);
+        alphabetMap.put('ъ', 61);
+        alphabetMap.put('ы', 62);
+        alphabetMap.put('ь', 63);
+        alphabetMap.put('э', 64);
+        alphabetMap.put('ю', 65);
+        alphabetMap.put('я', 66);
+        alphabetMap.put('.', 67);
+        alphabetMap.put(' ', 68);
+        alphabetMap.put(',', 69);
+        alphabetMap.put('«', 70);
+        alphabetMap.put('(', 71);
+        alphabetMap.put(')', 72);
+        alphabetMap.put('?', 73);
+        alphabetMap.put('\\', 74);
+        alphabetMap.put('-', 75);
+        alphabetMap.put('+', 76);
+        alphabetMap.put('*', 77);
+        alphabetMap.put('%', 78);
+        alphabetMap.put('№', 79);
+        alphabetMap.put(':', 80);
+        alphabetMap.put(';', 81);
+        alphabetMap.put('\'', 82);
+        alphabetMap.put('!', 83);
+        alphabetMap.put('\n' ,84);
+    }
+
+}
