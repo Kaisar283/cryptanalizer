@@ -1,4 +1,4 @@
-package ecxeption;
+package main.java.com.javarush.cryptanalyzer.kaisar.ecxeption;
 
 public class ApplicationEcxeption extends RuntimeException{
     public ApplicationEcxeption(){

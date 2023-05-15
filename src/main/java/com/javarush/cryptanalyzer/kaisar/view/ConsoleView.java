@@ -1,14 +1,12 @@
-package view;
+package main.java.com.javarush.cryptanalyzer.kaisar.view;
 
-import constants.ConsoleDialogeConstants;
-import entity.Result;
+import main.java.com.javarush.cryptanalyzer.kaisar.constants.ConsoleDialogeConstants;
+import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
 
-import javax.swing.*;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ConsoleView implements View{
+public class ConsoleView implements View {
     @Override
     public HashMap<String, String> getParameters() {
         Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package constants;
+package main.java.com.javarush.cryptanalyzer.kaisar.constants;
 
 public class ApplicationCompletionConstants {
     public static final String SUCCESS = "The application completed successfully!";

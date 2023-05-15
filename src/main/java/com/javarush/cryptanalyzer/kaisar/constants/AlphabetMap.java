@@ -1,4 +1,4 @@
-package constants;
+package main.java.com.javarush.cryptanalyzer.kaisar.constants;
 
 import java.util.HashMap;
 

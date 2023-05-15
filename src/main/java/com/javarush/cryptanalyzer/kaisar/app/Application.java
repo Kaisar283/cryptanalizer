@@ -1,14 +1,14 @@
-package app;
-
-import controller.MainController;
-import entity.Result;
-import repository.FunctionCode;
-import services.Function;
+package main.java.com.javarush.cryptanalyzer.kaisar.app;
+import main.java.com.javarush.cryptanalyzer.kaisar.controller.MainController;
+import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
+import main.java.com.javarush.cryptanalyzer.kaisar.repository.FunctionCode;
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Function;
 
 import java.util.HashMap;
 
-import static constants.FunctionCodeConstants.DECODE;
-import static constants.FunctionCodeConstants.ENCODE;
+import static main.java.com.javarush.cryptanalyzer.kaisar.constants.FunctionCodeConstants.DECODE;
+import static main.java.com.javarush.cryptanalyzer.kaisar.constants.FunctionCodeConstants.ENCODE;
+
 
 public class Application {
     private final MainController mainController;

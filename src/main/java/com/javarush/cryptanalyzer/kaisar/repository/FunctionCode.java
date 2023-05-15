@@ -1,8 +1,7 @@
-package repository;
-
-import services.Decode;
-import services.Encode;
-import services.Function;
+package main.java.com.javarush.cryptanalyzer.kaisar.repository;
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Encode;
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Decode;
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Function;
 
 public enum FunctionCode {
     ENCODE(new Encode()), DECODE(new Decode());

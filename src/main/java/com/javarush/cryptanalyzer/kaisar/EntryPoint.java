@@ -1,8 +1,9 @@
-import app.Application;
-import controller.MainController;
-import entity.Result;
-import view.ConsoleView;
-import view.View;
+package main.java.com.javarush.cryptanalyzer.kaisar;
+import main.java.com.javarush.cryptanalyzer.kaisar.app.Application;
+import main.java.com.javarush.cryptanalyzer.kaisar.controller.MainController;
+import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
+import main.java.com.javarush.cryptanalyzer.kaisar.view.ConsoleView;
+import main.java.com.javarush.cryptanalyzer.kaisar.view.View;
 
 public class EntryPoint {
 

@@ -1,4 +1,4 @@
-package constants;
+package main.java.com.javarush.cryptanalyzer.kaisar.constants;
 
 public class FunctionCodeConstants {
     public static final String ENCODE = "ENCODE";

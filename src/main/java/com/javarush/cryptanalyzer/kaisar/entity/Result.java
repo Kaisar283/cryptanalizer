@@ -1,7 +1,8 @@
-package entity;
+package main.java.com.javarush.cryptanalyzer.kaisar.entity;
 
-import ecxeption.ApplicationEcxeption;
-import repository.ResultCode;
+import main.java.com.javarush.cryptanalyzer.kaisar.ecxeption.ApplicationEcxeption;
+import main.java.com.javarush.cryptanalyzer.kaisar.repository.ResultCode;
+
 
 public class Result {
     private ResultCode resultCode;

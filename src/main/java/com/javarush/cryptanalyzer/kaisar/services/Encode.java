@@ -1,16 +1,19 @@
-package services;
+package main.java.com.javarush.cryptanalyzer.kaisar.services;
 
-import ecxeption.ApplicationEcxeption;
-import entity.Result;
-import repository.ResultCode;
-import constants.AlphabetMap;
+
+import main.java.com.javarush.cryptanalyzer.kaisar.constants.AlphabetMap;
+import main.java.com.javarush.cryptanalyzer.kaisar.constants.FilePathes;
+import main.java.com.javarush.cryptanalyzer.kaisar.ecxeption.ApplicationEcxeption;
+import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
+import main.java.com.javarush.cryptanalyzer.kaisar.repository.ResultCode;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.HashMap;
-import constants.FilePathes;
 
-public class Encode implements Function{
+
+public class Encode implements Function {
     @Override
     public Result execute(HashMap<String, String> parameters) {
         String pathToEncrypt = parameters.get("FilePath");
@@ -29,7 +32,7 @@ public class Encode implements Function{
                 if (AlphabetMap.alphabetMap.containsKey(letter)){
                     int key = AlphabetMap.alphabetMap.get(letter);
                     int cryptedValue = (key + keyForEncrypt) % AlphabetMap.alphabetMap.size();
-                    writer.write(cryptedValue);
+                    writer.write((char) cryptedValue);
                 }
             }
         }catch (Exception e){

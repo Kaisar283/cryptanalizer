@@ -1,6 +1,6 @@
-package view;
+package main.java.com.javarush.cryptanalyzer.kaisar.view;
 
-import entity.Result;
+import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
 
 import java.util.HashMap;
 
