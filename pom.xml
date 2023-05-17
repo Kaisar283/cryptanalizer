@@ -10,6 +10,7 @@
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.mainClass>com.javarush.cryptanalyzer.kaisar.EntryPoint</maven.compiler.mainClass>
     </properties>
 
     <!-- Зависимости и другая конфигурация проекта -->

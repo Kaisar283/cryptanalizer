@@ -11,4 +11,6 @@ public class ConsoleDialogeConstants {
     public static final String PATH_FOR_DECRYPTION = "Please enter the file path for decryption: ";
     public static final String INCORRECT_MODE_MESSAGE = "Incorrect mode chosen, please enter correct mode number: ";
     public static final String KEY_FOR_DECRYPTION_MESSAGE = "Please enter the encryption key: ";
+
+    public static final String CYCLE_MESSAGE = "If you want to finish working further, enter \"exit\"";
 }

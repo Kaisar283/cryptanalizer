@@ -1,7 +1,6 @@
 package main.java.com.javarush.cryptanalyzer.kaisar.services;
 
 
-import main.java.com.javarush.cryptanalyzer.kaisar.constants.AlphabetMap;
 import main.java.com.javarush.cryptanalyzer.kaisar.constants.FilePathes;
 import main.java.com.javarush.cryptanalyzer.kaisar.ecxeption.ApplicationEcxeption;
 import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
@@ -11,8 +10,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+
+import static main.java.com.javarush.cryptanalyzer.kaisar.constants.Rus_Alphabet.ALPHABET;
 
 public class Decode implements Function {
     @Override
@@ -24,16 +23,16 @@ public class Decode implements Function {
              BufferedReader bufferedReader = new BufferedReader(in);
              FileWriter writer = new FileWriter(patForDecryptedFile)){
 
-            while (bufferedReader.ready()){
-                int letter =  bufferedReader.read();
-
-                if (AlphabetMap.alphabetMap.containsValue(letter)){
-                    Integer decryptedValue = (letter - keyForDecryptFile) % AlphabetMap.alphabetMap.size();
-
-                    char value = getKeyByValue(AlphabetMap.alphabetMap, decryptedValue);
-                    writer.write(value);
-
+            String line;
+            while ((line = bufferedReader.readLine()) != null){
+                StringBuilder decryptedLine = new StringBuilder();
+                for (int i = 0; i < line.length(); i++) {
+                    char letter = line.charAt(i);
+                    char decodedLetter = decodeLetter(letter, keyForDecryptFile);
+                    decryptedLine.append(decodedLetter);
                 }
+                writer.write(decryptedLine.toString());
+                writer.write(System.lineSeparator());
             }
         }catch (Exception e){
             return new Result(ResultCode.ERROR, new ApplicationEcxeption("Decode operation has finished with exception ", e));
@@ -41,12 +40,13 @@ public class Decode implements Function {
         return new Result(ResultCode.OK);
     }
 
-    public static Character getKeyByValue(Map<Character, Integer> map, Integer value) {
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (Objects.equals(value, entry.getValue())){
-                return entry.getKey();
-            }
+    public static char decodeLetter(char letter, int key) {
+        int index = ALPHABET.indexOf(letter);
+        if (index != -1) {
+            int newIndex = (index - key + ALPHABET.length()) % ALPHABET.length();
+            return ALPHABET.charAt(newIndex);
+        } else {
+            return letter;
         }
-        return '\n';
     }
 }
