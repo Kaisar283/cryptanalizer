@@ -1,6 +1,6 @@
 package main.java.com.javarush.cryptanalyzer.kaisar.services;
 
-
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Function;
 import main.java.com.javarush.cryptanalyzer.kaisar.constants.FilePathes;
 import main.java.com.javarush.cryptanalyzer.kaisar.ecxeption.ApplicationEcxeption;
 import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
@@ -25,19 +25,25 @@ public class Decode implements Function {
 
             String line;
             while ((line = bufferedReader.readLine()) != null){
-                StringBuilder decryptedLine = new StringBuilder();
-                for (int i = 0; i < line.length(); i++) {
-                    char letter = line.charAt(i);
-                    char decodedLetter = decodeLetter(letter, keyForDecryptFile);
-                    decryptedLine.append(decodedLetter);
-                }
-                writer.write(decryptedLine.toString());
+                writer.write(decode(line, keyForDecryptFile));
                 writer.write(System.lineSeparator());
             }
+            bufferedReader.close();
+            in.close();
         }catch (Exception e){
             return new Result(ResultCode.ERROR, new ApplicationEcxeption("Decode operation has finished with exception ", e));
         }
         return new Result(ResultCode.OK);
+    }
+
+    public static String decode(String encodedText, int key) {
+        StringBuilder decryptedLine = new StringBuilder();
+        for (int i = 0; i < encodedText.length(); i++) {
+            char letter = encodedText.charAt(i);
+            char decodedLetter = decodeLetter(letter, key);
+            decryptedLine.append(decodedLetter);
+        }
+        return decryptedLine.toString();
     }
 
     public static char decodeLetter(char letter, int key) {

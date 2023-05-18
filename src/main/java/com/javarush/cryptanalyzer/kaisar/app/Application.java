@@ -6,9 +6,7 @@ import main.java.com.javarush.cryptanalyzer.kaisar.services.Function;
 
 import java.util.HashMap;
 
-import static main.java.com.javarush.cryptanalyzer.kaisar.constants.FunctionCodeConstants.DECODE;
-import static main.java.com.javarush.cryptanalyzer.kaisar.constants.FunctionCodeConstants.ENCODE;
-
+import static main.java.com.javarush.cryptanalyzer.kaisar.constants.FunctionCodeConstants.*;
 
 public class Application {
     private final MainController mainController;
@@ -27,6 +25,7 @@ public class Application {
         return switch (mode){
             case "1" -> FunctionCode.valueOf(ENCODE).getFunction();
             case "2" -> FunctionCode.valueOf(DECODE).getFunction();
+            case "3" -> FunctionCode.valueOf(BRUTEFORCE).getFunction();
             default -> throw new IllegalStateException("Unexpected value: " + mode);
         };
     }

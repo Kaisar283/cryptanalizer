@@ -1,6 +1,6 @@
 package main.java.com.javarush.cryptanalyzer.kaisar.services;
 
-
+import main.java.com.javarush.cryptanalyzer.kaisar.services.Function;
 import main.java.com.javarush.cryptanalyzer.kaisar.constants.FilePathes;
 import main.java.com.javarush.cryptanalyzer.kaisar.ecxeption.ApplicationEcxeption;
 import main.java.com.javarush.cryptanalyzer.kaisar.entity.Result;
@@ -38,6 +38,8 @@ public class Encode implements Function {
                 writer.write(encryptedLine.toString());
                 writer.write(System.lineSeparator());
             }
+            bufferedReader.close();
+            in.close();
         } catch (Exception e) {
             return new Result(ResultCode.ERROR, new ApplicationEcxeption(
                     "Decode operation has finished with exception ", e));
